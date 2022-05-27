@@ -1,0 +1,29 @@
+.ques {
+    padding: 20px;
+}
+
+.ques h1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.ques h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.companies {
+    padding: 30px;
+    flex-direction: row;
+    border-radius: 10px;
+    column-count: 5;
+    column-gap: 25px;
+}
+
+.card {
+    float: left;
+    display: table;
+    margin: 0 -5px;
+}

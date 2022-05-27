@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="c++.css">
+    <title>C++📕</title>
+</head>
+
+<body>
+    <div class="lang">
+        <div class="d-flex p-2 bd-highlight col">
+            <h1>C++ TUTORIAL</h1>
+        </div>
+        <p class="lead col">
+            C++ is a popular programming language.
+        </p>
+
+        <p class="lead col">
+            C++ is used to create computer programs, and is one of the most used language in game development.
+        </p>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Example
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body acc" #include <iostream>
+                        using namespace std; <br>
+
+                        int main() { <br>
+                        cout << "Hello World!" ; <br>
+                            return 0; <br>
+                            } <br>
+
+                    </div>
+                </div>
+            </div>
+
+            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+                <a class="navbar-brand" href="#">C++ Introduction </a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading1">What is C++?
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading2">Why Use C++ </a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+
+                    </li>
+                </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+                tabindex="0">
+                <h4 id="scrollspyHeading1" class="col">What is C++? </h4>
+                <p class="col">
+                    C++ is a cross-platform language that can be used to create high-performance applications. <br>
+                    C++ was developed by Bjarne Stroustrup, as an extension to the C language. <br>
+                    C++ gives programmers a high level of control over system resources and memory. <br>
+                    The language was updated 4 major times in 2011, 2014, 2017, and 2020 to C++11, C++14, C++17, C++20.
+                    <br>
+                </p>
+                <h4 id="scrollspyHeading2" class="col">Why Use C++ </h4>
+                <p class="col">
+                    C++ is one of the world's most popular programming languages.<br>
+
+                    C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.<br>
+
+                    C++ is an object-oriented programming language which gives a clear structure to programs and allows
+                    code
+                    to be reused, lowering development costs.<br>
+
+                    C++ is portable and can be used to develop applications that can be adapted to multiple
+                    platforms.<br>
+
+                    C++ is fun and easy to learn! <br>
+
+                    As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa <br>
+
+
+                </p>
+                <h1 class="col">
+                    C++ Install IDE
+
+                </h1>
+                <p class="col">
+                    An IDE (Integrated Development Environment) is used to edit AND compile the code. <br>
+
+                    Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be
+                    used
+                    to both edit and debug C++ code.<br>
+
+                    Note: Web-based IDE's can work as well, but functionality is limited.<br>
+
+                    We will use Code::Blocks in our tutorial, which we believe is a good place to start.<br>
+
+                    You can find the latest version of Codeblocks at http://www.codeblocks.org/. Download the
+                    mingw-setup.exe file, which will install the text editor with a compiler.<br>
+                </p>
+                <h1 class="col">
+                    C++ Quickstart
+
+                </h1>
+                <p class="col">
+                    Let's create our first C++ file. <br>
+
+                    Open Codeblocks and go to File > New > Empty File.<br>
+
+                    Write the following C++ code and save the file as myfirstprogram.cpp (File > Save File as):<br>
+
+
+                </p>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                Example
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body acc">
+                                #include <iostream>
+                                    using namespace std; <br>
+
+                                    int main() {<br>
+                                    cout << "Hello World!" ; <br>
+                                        return 0; <br>
+                                        }<br>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="col">
+                        Don't worry if you don't understand the code above - we will discuss it in detail in later
+                        chapters.
+                        For now <br>
+                        focus on how to run the code. <br>
+                        <br>
+                        In Codeblocks, it should look like this: <br>
+
+
+                    </p>
+                    <img src="https://www.w3schools.com/CPP/codeblocks2.png" class="img-fluid" alt="...">
+
+                    <h1 class="col"> OUTPUT</h1>
+
+                    <p class="output">
+                        Hello World! <br>
+                        Process returned 0 (0x0) execution time : 0.011 s <br>
+                        Press any key to continue. <br>
+                    </p>
+                    <p class="col">Congratulations! You have now written and executed your first C++ program.
+
+                    </p>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    myfirstprogram.cpp
+
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body acc" #include <iostream>
+                                    #include <iostream>
+                                        using namespace std; <br>
+
+                                        int main() { <br>
+                                        cout << "Hello World!" ; <br>
+                                            return 0; <br>
+                                            } <br>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="col"> OUTPUT</h1>
+
+                        <p class="output">
+                            Hello World!
+
+                        </p>
+                        <h1 class="col">
+                            C++ Syntax
+
+                        </h1>
+                        <p class="col">
+                            Let's break up the following code to understand it better:
+
+
+                        </p>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Example
+
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body acc" #include <iostream>
+                                        using namespace std; <br>
+
+                                        int main() { <br>
+                                        cout << "Hello World!" ; <br>
+                                            return 0; <br>
+                                            }
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger"><a
+                                    href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_helloworld "
+                                    target="_blank" class="link-warning">TRY IT YOURSELF>></a></button>
+
+                            <h1 class="col">
+                                C++ Data Types
+
+                            </h1>
+                            <p class="col">
+                                As explained in the Variables chapter, a variable in C++ must be a specified data type:
+                                <br>
+                                int myNum = 5; // Integer (whole number) <br>
+                                float myFloatNum = 5.99; // Floating point number <br>
+                                double myDoubleNum = 9.98; // Floating point number <br>
+                                char myLetter = 'D'; // Character <br>
+                                bool myBoolean = true; // Boolean <br>
+                                string myText = "Hello"; // String <br>
+
+
+
+                            </p>
+                            <table class="table table-hover table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Data Type </th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>boolean</td>
+                                        <td>1 byte</td>
+                                        <td>Stores true or false values</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>char</td>
+                                        <td>1 byte</td>
+                                        <td>Stores a single character/letter/number, or ASCII values</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>int</td>
+                                        <td>2 or 4 bytes</td>
+                                        <td>Stores whole numbers, without decimals</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>float</td>
+                                        <td>4 bytes</td>
+                                        <td>Stores fractional numbers, containing one or more decimals. Sufficient for
+                                            storing 7 decimal digits</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>double</td>
+                                        <td>8 bytes</td>
+                                        <td>Stores fractional numbers, containing one or more decimals. Sufficient for
+                                            storing 15 decimal digits</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                            <h1 class="col">
+                                C++ If ... Else
+
+                            </h1>
+                            <h3 class="col">
+                                C++ Conditions and If Statements
+
+                            </h3>
+                            <p class="col">
+                                C++ supports the usual logical conditions from mathematics:
+                            </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">Less than: a < b </li>
+                                <li class="list-group-item">Less than or equal to: a <= b </li>
+                                <li class="list-group-item">Greater than: a > b </li>
+                                <li class="list-group-item">Greater than or equal to: a >= b </li>
+                                <li class="list-group-item">Equal to a == b </li>
+                                <li class="list-group-item">Not Equal to: a != b </li>
+                            </ul>
+
+                            <p class="col">
+                                You can use these conditions to perform different actions for different decisions. <br>
+
+                                C++ has the following conditional statements: <br>
+
+                                Use if to specify a block of code to be executed, if a specified condition is true <br>
+                                Use else to specify a block of code to be executed, if the same condition is false <br>
+                                Use else if to specify a new condition to test, if the first condition is false <br>
+                                Use switch to specify many alternative blocks of code to be executed <br>
+
+                            </p>
+                            <h1 class="col">
+                                C++ Arrays
+                            </h1>
+                            <p class="col">
+                                Arrays are used to store multiple values in a single variable, instead of declaring
+                                separate
+                                variables for each value. <br>
+
+                                To declare an array, define the variable type, specify the name of the array followed by
+                                square brackets and specify the number of elements it should store:
+                            </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">string cars[4]; </li>
+                            </ul>
+                            <p class="col">
+                                We have now declared a variable that holds an array of four strings. To insert values to
+                                it,
+                                we can use an array literal - place the values in a comma-separated list, inside curly
+                                braces:
+                            </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"}; </li>
+                            </ul>
+                            <h1 class="col">
+                                Access the Elements of an Array
+
+                            </h1>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Example
+
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body acc">
+                                            string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                                            cout << cars[0]; br </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-danger"><a
+                                            href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_array "
+                                            target="_blank" class="link-warning">TRY IT YOURSELF>></a></button>
+
+                                    <h1 class="col">
+                                        Change an Array Element
+
+                                    </h1>
+                                    <p class="col">
+                                        To change the value of a specific element, refer to the index number:
+
+
+                                    </p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">cars[0] = "Opel";
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Example
+
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body acc">
+                                                    string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                                                    cars[0] = "Opel"; <br>
+                                                    cout << cars[0]; <br>
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger"><a
+                                                href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_array_change "
+                                                target="_blank" class="link-warning">TRY IT YOURSELF>></a></button>
+
+
+                                        <h1 class="col">
+                                            C++ Pointers
+
+                                        </h1>
+                                        <h3 class="col">
+                                            Creating Pointers
+                                        </h3>
+                                        <p class="col">
+                                            You learned from the previous chapter, that we can get the memory address of
+                                            a
+                                            variable by using the & operator:
+
+
+                                        </p>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        Example
+
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body acc">
+                                                        string food = "Pizza";
+                                                        string* ptr = &food;
+
+                                                        cout << food << "\n" ; cout << &food << "\n" ; cout << ptr
+                                                            << "\n" ; </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-danger"><a
+                                                        href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_pointer_ref "
+                                                        target="_blank" class="link-warning">TRY IT
+                                                        YOURSELF>></a></button>
+
+                                                <p class="col">
+                                                    A pointer however, is a variable that stores the memory address as
+                                                    its
+                                                    value.
+                                                    <br><br>
+                                                    A pointer variable points to a data type (like int or string) of the
+                                                    same type, and is created with the * operator. The address of the
+                                                    variable you're working with is assigned to the pointer: <br>
+                                                </p>
+
+                                                <div class="accordion" id="accordionExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                Example
+
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body acc">
+                                                                string food = "Pizza"; <br>
+                                                                string* ptr = &food; <br>
+
+                                                                cout << food << "\n" ;<br>
+
+
+                                                                    cout << &food << "\n" ;<br>
+
+                                                                        cout << ptr << "\n" ;<br>
+
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-danger"><a
+                                                            href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_pointer"
+                                                            target="_blank" class="link-warning">TRY IT
+                                                            YOURSELF>></a></button>
+
+                                                    <p class="col">
+                                                        Example explained
+                                                        Create a pointer variable with the name ptr, that points to a
+                                                        string
+                                                        variable, by using the asterisk sign * (string* ptr). Note that
+                                                        the
+                                                        type of the pointer has to match the type of the variable you're
+                                                        working with. <br> <br>
+
+                                                        Use the & operator to store the memory address of the variable
+                                                        called food, and assign it to the pointer. <br> <br>
+
+                                                        Now, ptr holds the value of food's memory address. <br>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">Tip: There are three ways to declare
+                                                            pointer variables, but the first way is preferred: </li>
+                                                        <li class="list-group-item">string* mystring; // Preferred </li>
+                                                        <li class="list-group-item">string *mystring; </li>
+                                                        <li class="list-group-item">string * mystring; </li>
+                                                    </ul>
+
+
+                                                    </p>
+                                                    <h1 class="col">
+                                                        C++ Functions
+
+                                                    </h1>
+                                                    <p class="col">A function is a block of code which only runs when it
+                                                        is
+                                                        called. <br> <br>
+
+                                                        You can pass data, known as parameters, into a function. <br>
+                                                        <br>
+
+                                                        Functions are used to perform certain actions, and they are
+                                                        important for reusing code: Define the code once, and use it
+                                                        many
+                                                        times. <br>
+
+                                                    </p>
+                                                    <h3 class="col">
+                                                        Create a Function
+
+                                                    </h3>
+                                                    <p class="col">
+                                                        C++ provides some pre-defined functions, such as main(), which
+                                                        is
+                                                        used to execute code. But you can also create your own functions
+                                                        to
+                                                        perform certain actions. <br>
+
+                                                        To create (often referred to as declare) a function, specify the
+                                                        name of the function, followed by parentheses (): <br>
+
+
+                                                    </p>
+                                                    <p class="col">
+                                                        Syntax: <br>
+                                                        void myFunction() { <br>
+                                                        // code to be executed <br>
+                                                        }
+
+                                                    </p>
+                                                    <h3 class="col">
+                                                        Example Explained
+
+                                                    </h3>
+                                                    <ul class="list-group">
+
+                                                        <li class="list-group-item">myFunction() is the name of the
+                                                            function
+                                                        </li>
+                                                        <li class="list-group-item">void means that the function does
+                                                            not
+                                                            have a return value. You will learn more about return values
+                                                            later in the next chapter </li>
+                                                        <li class="list-group-item">inside the function (the body), add
+                                                            code
+                                                            that defines what the function should do </li>
+                                                    </ul>
+                                                    <h1 class="col">
+                                                        Call a Function
+
+                                                    </h1>
+                                                    <p class="col">
+                                                        Declared functions are not executed immediately. They are "saved
+                                                        for
+                                                        later use", and will be executed later, when they are called.
+                                                        <br>
+                                                        <br>
+                                                        To call a function, write the function's name followed by two
+                                                        parentheses () and a semicolon ; <br> <br>
+
+                                                        In the following example, myFunction() is used to print a text
+                                                        (the
+                                                        action), when it is called: <br>
+
+                                                        Example
+
+                                                    </p>
+
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingOne">
+                                                                <button class="accordion-button" type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                                    aria-controls="collapseOne">
+                                                                    Example
+
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseOne"
+                                                                class="accordion-collapse collapse show"
+                                                                aria-labelledby="headingOne"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body acc">
+                                                                    // Create a function <br>
+                                                                    void myFunction() { <br>
+                                                                    cout << "I just got executed!" ; <br>
+                                                                        } <br>
+
+                                                                        int main() { <br>
+                                                                        myFunction(); // call the function <br>
+                                                                        return 0; <br>
+                                                                        } <br>
+
+                                                                        // Outputs "I just got executed!" <br>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="button" class="btn btn-danger"><a
+                                                                href="https://www.w3schools.com/CPP/trycpp.asp?filename=demo_pointer"
+                                                                target="_blank" class="link-warning">TRY IT
+                                                                YOURSELF>></a></button>
+                                                        <p class="col">A function can be called multiple times:
+
+                                                        </p>
+                                                        <h1 class="col">Function Declaration and Definition
+                                                        </h1>
+                                                        <p class="col">A C++ function consist of two parts:
+
+                                                        </p>
+                                                        <p class="col">Declaration: the return type, the name of the
+                                                            function, and parameters (if any) <br> <br>
+                                                            Definition: the body of the function (code to be executed)
+                                                        </p>
+                                                        <h1 class="col">
+                                                            C++ OOP
+
+                                                        </h1>
+                                                        <h3 class="col">
+                                                            C++ What is OOP?
+
+                                                        </h3>
+                                                        <p class="col">OOP stands for Object-Oriented Programming. <br>
+                                                            <br>
+
+                                                            Procedural programming is about writing procedures or
+                                                            functions
+                                                            that perform operations on the data, while object-oriented
+                                                            <br>
+                                                            programming is about creating objects that contain both data
+                                                            and
+                                                            functions. <br> <br>
+
+                                                            Object-oriented programming has several advantages over
+                                                            procedural programming: <br>
+
+                                                        </p>
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">OOP is faster and easier to
+                                                                execute
+                                                            </li>
+                                                            <li class="list-group-item">OOP provides a clear structure
+                                                                for
+                                                                the programs </li>
+                                                            <li class="list-group-item">OOP helps to keep the C++ code
+                                                                DRY
+                                                                "Don't Repeat Yourself", and makes the code easier to
+                                                                maintain, modify and debug </li>
+                                                            <li class="list-group-item">OOP makes it possible to create
+                                                                full
+                                                                reusable applications with less code and shorter
+                                                                development
+                                                                time
+                                                            </li>
+
+                                                        </ul>
+                                                        <h1 class="col">C++ What are Classes and Objects? </h1>
+                                                        <p class="col">
+                                                            Classes and objects are the two main aspects of
+                                                            object-oriented
+                                                            programming. <br>
+
+                                                            Look at the following illustration to see the difference
+                                                            between
+                                                            class and objects: <br>
+
+
+                                                        </p>
+                                                        <img src="c++ images/oops.png" class="img-fluid" alt="...">
+                                                        <p class="col">So, a class is a template for objects, and an
+                                                            object
+                                                            is an instance of a class. <br> <br>
+
+                                                            When the individual objects are created, they inherit all
+                                                            the
+                                                            variables and functions from the class.
+
+                                                        </p>
+                                                    </div>
+
+
+                                                    <script
+                                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                                                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                                                        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

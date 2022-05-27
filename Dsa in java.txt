@@ -1,0 +1,716 @@
+<h2>DSA using Java</h2>
+<h3>What is a Data Structure?</h3>
+<p>Data Structure is a way to organized data in such a way that it can be used efficiently. Following terms are foundation terms of a data structure.</p>
+<ul>
+<li><b>Interface − </b>Each data strucure has an interface. Interface represents the set of operations that a datastructure supports.An interface only provides the list of supported operations, type of parameters they can accept and return type of these operations.
+
+<li><b>Implementation − </b>Implementation provides the internal representation of a data structure. Implementation also provides the defination of the alogrithms used in the opreations of the data structure.
+</ul>
+
+<h3>Characteristics of a Data Structure</h3>
+<ul>
+<li><b>Correctness − </b> Data Structure implementation should implement its interface correctly.
+
+<li><b>Time Complexity − </b> Running time or execution time of operations of data structure must be as small as possible.
+
+<li><b>Space Complexity − </b> Memory usage of a data structure operation should be as little as possible.
+</ul>
+
+<h3>Need for Data Structure</h3>
+<p>As applications are getting complex and data rich, there are three common problems applications face now-a-days.</p>
+<ul>
+<li><b>Data Search − </b> Consider an inventory of 1 million(106) items of a store. If application is to search an item. It has to search item in 1 million(106) items every time slowing down the search. As data grows, search will become slower.
+
+<li><b>Processor speed − </b> Processor speed although being very high, falls limited if data grows to billon records.
+
+<li><b>Multiple requests − </b> As thousands of users can search data simultaneously on a web server,even very fast server fails while searching the data.
+</ul>
+<p>To solve above problems, data structures come to rescue. Data can be organized in a data structure in such a way that all items may not be required to be search and required data can be searched almost instantly.</p>
+
+<h3>Execution Time Cases</h3>
+<p>There are three cases which are usual used to compare various data structure's execution time in relative manner.</p>
+<ul>
+<li><b>Worst Case − </b> This is the scenario where a particular data structure operation takes maximum time it can take. If a operation's worst case time is ƒ(n) then this operation will not take time more than ƒ(n) time where ƒ(n) represents function of n.
+
+<li><b>Average Case − </b> This is the scenario depicting the average execution time of an operation of a data structure. If a operation takes ƒ(n) time in execution then m operations will take mƒ(n) time.
+
+<li><b>Best Case − </b> This is the scenario depicting the least possible execution time of an operation of a data structure. If a operation takes ƒ(n) time in execution then actual operation may take time as random number which would be maximum as ƒ(n).
+</ul>
+
+<h3>Algorithm concept</h3>
+<p>Algorithm is a step by step procedure, which defines a set of instructions to be executed in certain order to get the desired output. In term of data structures, following are the categories of algorithms.</p>
+<ul>
+<li><b>Search − </b> Algorithms to search an item in a datastrucure.
+
+<li><b>Sort − </b> Algorithms to sort items in certain order
+
+<li><b>Insert − </b> Algorithm to insert item in a datastructure
+
+<li><b>Update − </b> Algorithm to update an existing item in a data structure
+
+<li><b>Delete − </b> Algorithm to delete an existing item from a data structure
+</ul>
+
+<h3>Algorithm analysis</h3>
+<p>Algorithm analysis deals with the execution time or running time of various operations of a data structure. Running time of an operation can be defined as no. of computer instructions executed per operation. As exact running time of any operation varies from one computer to another computer, we usually analyze the running time of any operation as some function of n, where n is the no. of items processed in that operation in a datastructure.</p>
+
+<h3>Asymptotic analysis</h3>
+<p>Asymptotic analysis refers to computing the running time of any operation in mathematical units of computation. For example, running time of one operation is computed as f(n) and of another operation as g(n2). Which means first operation running time will increase linearly with the increase in n and running time of second operation will increase exponentially when n increases. Similarly the running time of both operations will be nearly same if n is significantly small.</p>
+
+<h3>Asymptotic Notations</h3>
+<p>Following are commonly used asymptotic notations used in calculating running time complexity of an algorithm.</p>
+<ul>
+<li>Ο Notation
+
+<li>Ω Notation
+
+<li>θ Notation
+</ul>
+
+<h3>Big Oh Notation, Ο</h3>
+<p>The Ο(n) is the formal way to express the upper bound of an algorithm's running time. It measures the worst case time complexity or longest amount of time an algorithm can possibly take to complete. <br>
+For example, for a function f(n)<br>
+Ο(f(n)) = { g(n) : there exists c > 0 and n0 such that g(n) ≤ c.f(n) for all n > n0. }<br>
+Big Oh notation is used to simplify functions. For example, we can replace a specific functional equation 7nlogn + n - 1 with Ο(f(nlogn)). Consider the scenario as follows:<br>
+
+7nlogn +n - 1 ≤ 7nlogn + n<br>
+7nlogn +n - 1 ≤ 7nlogn + nlogn<br>
+for n ≥ 2 so that logn ≥ 1<br>
+7nlogn +n - 1 ≤ 8nlogn<br>
+It demonstrates that f(n) = 7nlogn + n - 1 is within the range of outout of O(nlogn) using constants c = 8 and n0 = 2.
+</p>
+
+<h3>Omega Notation, Ω</h3>
+<p>The Ω(n) is the formal way to express the lower bound of an algorithm's running time. It measures the best case time complexity or best amount of time an algorithm can possibly take to complete.<br>
+
+For example, for a function f(n)<br>
+
+Ω(f(n)) ≥ { g(n) : there exists c > 0 and n0 such that g(n) ≤ c.f(n) for all n > n0. }
+</p>
+
+<h3>Theta Notation, θ</h3>
+<p>The θ(n) is the formal way to express both the lower bound and upper bound of an algorithm's running time. It is represented as following.<br>
+
+θ(f(n)) = { g(n) if and only if g(n) = Ο(f(n)) and g(n) = Ω(f(n)) for all n > n0. }
+</p>
+
+<h3>Data Structures</h3>
+<p>Data Structure is a way to organized data in such a way that it can be used efficiently. Following terms are basic terms of a data structure.</p>
+
+<h3>Data Definition</h3>
+<p>Data Definition defines a particular data with following characteristics.</p>
+<ul>
+<li><b>Atomic − </b> Defition should define a single concept
+
+<li><b>Traceable − </b> Definition should be be able to be mapped to some data element.
+
+<li><b>Accurate − </b> Definition should be unambiguous.
+
+<li><b>Clear and Concise − </b> Definition should be understandable.
+</ul>
+
+<h3>Data Object</h3>
+<p>Data Object represents an object having a data.</p>
+
+<h3>Data Type</h3>
+<p>Data type is way to classify various types of data such as integer, string etc. which determines the values that can be used with the corresponding type of data, the type of operations that can be performed on the corresponding type of data. Data type of two types −</p>
+<ul>
+<li>Built-in Data Type
+
+<li>Derived Data Type
+</ul>
+
+<h3>Built-in Data Type</h3>
+Those data types for which a language has built-in support are known as Built-in Data types. For example, most of the languages provides following built-in data types.
+<ul>
+<li>Integers
+
+<li>Boolean (true, false)
+
+<li>Floating (Decimal numbers)
+
+<li>Character and Strings
+</ul>
+
+<h3>Derived Data Type</h3>
+<p>Those data types which are implementation independent as they can be implemented in one or other way are known as derived data types. These data types are normally built by combination of primary or built-in data types and associated operations on them. For example −</p>
+<ul>
+<li>List
+
+<li>Array
+
+<li>Stack
+
+<li>Queue
+</ul>
+
+<h3>Array Basics</h3>
+<p>Array is a container which can hold fix number of items and these items should be of same type. Most of the datastructure make use of array to implement their algorithms. Following are important terms to understand the concepts of Array</p>
+<ul>
+<li><b>Element − </b> Each item stored in an array is called an element.
+
+<li><b>Index − </b> Each location of an element in an array has a numerical index which is used to identify the element.
+</ul>
+
+<h3>Array Representation</h3>
+
+
+<p>As per above shown illustration, following are the important points to be considered.</p>
+<ul>
+<li>Index starts with 0.
+
+<li>Array length is 8 which means it can store 8 elements.
+
+<li>Each element can be accessed via its index. For example, we can fetch element at index 6 as 9.
+</ul>
+
+<h3>Linked List Basics</h3>
+<p>Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list the second most used data structure after array. Following are important terms to understand the concepts of Linked List.</p>
+<ul>
+<li><b>Link − </b> Each Link of a linked list can store a data called an element.
+
+<li><b>Next − </b> Each Link of a linked list contain a link to next link called Next.
+
+<li><b>LinkedList − </b> A LinkedList contains the connection link to the first Link called First.
+</ul>
+
+<h3>Linked List Representation</h3>
+
+<p>As per above shown illustration, following are the important points to be considered.</p>
+<ul>
+<li>LinkedList contains an link element called first.
+
+<li>Each Link carries a data field(s) and a Link Field called next.
+
+<li>Each Link is linked with its next link using its next link.
+
+<li>Last Link carries a Link as null to mark the end of the list.
+</ul>
+
+<h3>Types of Linked List</h3>
+<p>Following are the various flavours of linked list.</p>
+<ul>
+<li><b>Simple Linked List − </b>Item Navigation is forward only.
+
+<li><b>Doubly Linked List − </b> Items can be navigated forward and backward way.
+
+<li><b>Circular Linked List − </b> Last item contains link of the first element as next and and first element has link to last element as prev.
+</ul>
+
+<h3>Basic Operations</h3>
+<p>Following are the basic operations supported by a list.</p>
+<ul>
+<li><b>Insertion − </b> add an element at the beginning of the list.
+
+<li><b>Deletion − </b> delete an element at the beginning of the list.
+
+<li><b>Display − </b> displaying complete list.
+
+<li><b>Search − </b> search an element using given key.
+
+<li><b>Delete − </b> delete an element using given key.
+</ul>
+
+<h3>Insertion Operation</h3>
+<p>Insertion is a three step process:</p>
+<ol>
+<li>Create a new Link with provided data.
+
+<li>Point New Link to old First Link.
+
+<li>Point First Link to this New Link.
+</ol>
+
+<h3>Deletion Operation</h3>
+<p>Deletion is a two step process:</p>
+<ol>
+<li>Get the Link pointed by First Link as Temp Link.
+
+<li>Point First Link to Temp Link's Next Link.
+</ol>
+
+<h3>Navigation Operation</h3>
+<p>Navigation is a recursive step process and is basis of many operations like search, delete etc.:</p>
+<ol>
+<li>Get the Link pointed by First Link as Current Link.
+
+<li>Check if Current Link is not null and display it.
+
+<li>Point Current Link to Next Link of Current Link and move to above step.
+</ol>
+
+<h3>Advanced Operations</h3>
+<p>Following are the advanced operations specified for a list.</p>
+<ul>
+<li><b>Sort −</b> sorting a list based on a particular order.
+
+<li><b>Reverse −</b> reversing a linked list.
+
+<li><b>Concatenate −</b> concatenate two lists.
+</ul>
+
+<h3>Doubly Linked List Basics</h3>
+<p>Doubly Linked List is a variation of Linked list in which navigation is possible in both ways either forward and backward easily as compared to Single Linked List. Following are important terms to understand the concepts of doubly Linked List</p>
+<ul>
+<li><b>Link − </b> Each Link of a linked list can store a data called an element.
+
+<li><b>Next − </b> Each Link of a linked list contain a link to next link called Next.
+
+<li><b>Prev − </b> Each Link of a linked list contain a link to previous link called Prev.
+
+<li><b>LinkedList − </b> A LinkedList contains the connection link to the first Link called First and to the last link called Last.
+</ul>
+
+<h3>Doubly Linked List Representation</h3>
+<p>As per above shown illustration, following are the important points to be considered.</p>
+<ul>
+<li>Doubly LinkedList contains an link element called first and last.
+
+<li>Each Link carries a data field(s) and a Link Field called next.
+
+<li>Each Link is linked with its next link using its next link.
+
+<li>Each Link is linked with its previous link using its prev link.
+
+<li>Last Link carries a Link as null to mark the end of the list.
+</ul>
+
+<h3>Basic Operations</h3>
+<p>Following are the basic operations supported by an list.<p>
+<ul>
+<li><b>Insertion − </b> add an element at the beginning of the list.
+
+<li><b>Deletion −</b> delete an element at the beginning of the list.
+
+<li><b>Insert Last − </b>add an element in the end of the list.
+
+<li><b>Delete Last − </b>delete an element from the end of the list.
+
+<li><b>Insert After −</b> add an element after an item of the list.
+
+<li><b>Delete − </b>delete an element from the list using key.
+
+<li><b>Display forward −</b> displaying complete list in forward manner.
+
+<li><b>Display backward − </b>displaying complete list in backward manner.
+</ul>
+
+<h3>Circular Linked List Basics</h3>
+<p>Circular Linked List is a variation of Linked list in which first element points to last element and last element points to first element. Both Singly Linked List and Doubly Linked List can be made into as circular linked list</p>
+
+<p>As per above shown illustrations, following are the important points to be considered.</p>
+<ul>
+<li>Last Link'next points to first link of the list in both cases of singly as well as doubly linked list.
+
+<li>First Link's prev points to the last of the list in case of doubly linked list.
+</ul>
+
+<h3>Basic Operations</h3>
+<p>Following are the important operations supported by a circular list.</p>
+<ul>
+<li><b>insert − </b>insert an element in the start of the list.
+
+<li><b>delete − </b>insert an element from the start of the list.
+
+<li><b>display − </b> display the list.
+</ul>
+
+<h3>Stack</h3>
+<p>Stack is kind of data structure which allows operations on data only at one end. It allows access to the last inserted data only. Stack is also called LIFO (Last In First Out) data structure and Push and Pop operations are related in such a way that only last item pushed (added to stack) can be popped (removed from the stack).</p>
+
+<h3>Basic Operations</h3>
+<p>Following are two primary operations of a stack which are following.</p>
+<ul>
+<li><b>Push − </b> push an element at the top of the stack.
+
+<li><b>Pop − </b> pop an element from the top of the stack.
+</ul>
+<p>There is few more operations supported by stack which are following.</p>
+<ul>
+<li><b>Peek − </b>get the top element of the stack.
+
+<li><b>isFull − </b> check if stack is full.
+
+<li><b>isEmpty − </b>check if stack is empty.
+</ul>
+
+<h3>Push Operation</h3>
+<p>Whenever an element is pushed into stack, stack stores that element at the top of the storage and increments the top index for later use. If storage is full then an error message is usually shown.</p>
+
+<h3>Pop Operation</h3>
+<p>Whenever an element is to be popped from stack, stack retrives the element from the top of the storage and decrements the top index for later use.</p>
+
+<h3>Parsing Expressions</h3>
+<p>Ordinary airthmetic expressions like 2*(3*4) are easier for human mind to parse but for an algorithm it would be pretty difficult to parse such an expression. To ease this difficulty, an airthmetic expression can be parsed by an algorithm using a two step approach.</p>
+<ul>
+<li>Transform the provided arithmetic expression to postfix notation.
+
+<li>Evaluate the postfix notation.
+</ul>
+
+<h3>Infix Notation</h3>
+<p>Normal airthmetic expression follows Infix Notation in which operator is in between the operands. For example A+B here A is first operand, B is second operand and + is the operator acting on the two operands.</p>
+
+<h3>Postfix Notation</h3>
+<p>Postfix notation varies from normal arithmetic expression or infix notation in a way that the operator follows the operands. </p>
+
+<h3>Infix to PostFix Conversion</h3>
+<p>Before looking into the way to translate Infix to postfix notation, we need to consider following basics of infix expression evaluation.</p>
+<ul>
+<li>Evaluation of the infix expression starts from left to right.
+
+<li>Keep precedence in mind, for example * has higher precedence over +. For example
+<ul>
+<li>2+3*4 = 2+12.
+
+<li>2+3*4 = 14.
+</ul>
+<li>Override precedence using brackets, For example
+<ul>
+<li>(2+3)*4 = 5*4.
+
+<li>(2+3)*4= 20.
+</ul>
+</ul>
+
+<h3>Queue</h3>
+<p>Queue is kind of data structure similar to stack with primary difference that the first item inserted is the first item to be removed (FIFO - First In First Out) where stack is based on LIFO, Last In First Out principal.</p>
+
+<h3>Basic Operations</h3>
+<ul>
+<li><b>insert / enqueue −</b> add an item to the rear of the queue.
+
+<li><b>remove / dequeue −</b> remove an item from the front of the queue.
+
+<p>We're going to implement Queue using array in this article. There is few more operations supported by queue which are following.</p>
+</ul>
+<ul>
+<li><b>Peek −</b> get the element at front of the queue.
+
+<li><b>isFull − </b>check if queue is full.
+
+<li><b>isEmpty − </b> check if queue is empty.
+</ul>
+
+<h3>Insert / Enqueue Operation</h3>
+<p>Whenever an element is inserted into queue, queue increments the rear index for later use and stores that element at the rear end of the storage. If rear end reaches to the last index and it is wrapped to the bottom location. Such an arrangement is called wrap around and such queue is circular queue. This method is also termed as enqueue operation.</p>
+
+<h3>Remove / Dequeue Operation</h3>
+<p>Whenever an element is to be removed from queue, queue get the element using front index and increments the front index. As a wrap around arrangement, if front index is more than array's max index, it is set to 0.</p>
+
+<h3>Priority Queue</h3>
+<p>Priority Queue is more specilized data structure than Queue. Like ordinary queue, priority queue has same method but with a major difference. In Priority queue items are ordered by key value so that item with the lowest value of key is at front and item with the highest value of key is at rear or vice versa. So we're assigned priority to item based on its key value. Lower the value, higher the priority. Following are the principal methods of a Priority Queue.</p>
+
+<h3>Basic Operations</h3>
+<ul>
+<li><b>insert / enqueue − </b> add an item to the rear of the queue.
+
+<li><b>remove / dequeue − </b> remove an item from the front of the queue.
+</ul>
+
+<h3>Priority Queue Representation</h3>
+<p>We're going to implement Queue using array in this article. There is few more operations supported by queue which are following.</p>
+<ul>
+<li><b>Peek −</b> get the element at front of the queue.
+
+<li><b>isFull − </b> check if queue is full.
+
+<li><b>isEmpty − </b> check if queue is empty.
+</ul>
+
+<h3>Insert / Enqueue Operation</h3>
+<p>Whenever an element is inserted into queue, priority queue inserts the item according to its order. Here we're assuming that data with high value has low priority.</p>
+
+<h3>Remove / Dequeue Operation</h3>
+<p>Whenever an element is to be removed from queue, queue get the element using item count. Once element is removed. Item count is reduced by one.</p>
+
+<h3>Tree</h3>
+<p>Tree represents nodes connected by edges. We'll going to discuss binary tree or binary search tree specifically.</p>
+
+<p>Binary Tree is a special datastructure used for data storage purposes. A binary tree has a special condition that each node can have two children at maximum. A binary tree have benefits of both an ordered array and a linked list as search is as quick as in sorted array and insertion or deletion operation are as fast as in linked list.</p>
+
+<h3>Terms</h3>
+<p>Following are important terms with respect to tree.</p>
+<ul>
+
+<li><b>Path − </b> Path refers to sequence of nodes along the edges of a tree.
+
+<li><b>Root − </b> Node at the top of the tree is called root. There is only one root per tree and one path from root node to any node.
+
+<li><b>Parent − </b> Any node except root node has one edge upward to a node called parent.
+
+<li><b>Child − </b> Node below a given node connected by its edge downward is called its child node.
+
+<li><b>Leaf − </b> Node which does not have any child node is called leaf node.
+
+<li><b>Subtree − </b> Subtree represents descendents of a node.
+
+<li><b>Visiting − </b> Visiting refers to checking value of a node when control is on the node.
+
+<li><b>Traversing − </b> Traversing means passing through nodes in a specific order.
+
+<li><b>Levels −</b> Level of a node represents the generation of a node. If root node is at level 0, then its next child node is at level 1, its grandchild is at level 2 and so on.
+
+<li><b>keys − </b> Key represents a value of a node based on which a search operation is to be carried out for a node.
+</ul>
+<p>Binary Search tree exibits a special behaviour. A node's left child must have value less than its parent's value and node's right child must have value greater than it's parent value.</p>
+
+<h3>Binary Search Tree Representation</h3>
+<p>We're going to implement tree using node object and connecting them through references.</p>
+
+<h3>Basic Operations</h3>
+<p>Following are basic primary operations of a tree which are following.</p>
+<ul>
+<li><b>Search − </b> search an element in a tree.
+
+<li><b>Insert − </b> insert an element in a tree.
+
+<li><b>Preorder Traversal − </b> traverse a tree in a preorder manner.
+
+<li><b>Inorder Traversal − </b> traverse a tree in an inorder manner.
+
+<li><b>Postorder Traversal − </b> traverse a tree in a postorder manner.
+</ul>
+
+<h3>Search Operation</h3>
+<p>Whenever an element is to be search. Start search from root node then if data is less than key value, search element in left subtree otherwise search element in right subtree. Follow the same algorithm for each node.</p>
+
+<h3>Insert Operation</h3>
+<p>Whenever an element is to be inserted. First locate its proper location. Start search from root node then if data is less than key value, search empty location in left subtree and insert the data. Otherwise search empty location in right subtree and insert the data.</p>
+
+<h3>Preorder Traversal</h3>
+<p>It is a simple three step process.</p>
+<ul>
+<li>visit root node
+
+<li>traverse left subtree
+
+<li>traverse right subtree
+</ul>
+
+<h3>Inorder Traversal</h3>
+<p>It is a simple three step process.</p>
+<ul>
+<li>traverse left subtree
+
+<li>visit root node
+
+<li>traverse right subtree
+</ul>
+
+<h3>Postorder Traversal</h3>
+<p>It is a simple three step process.</p>
+<ul>
+<li>traverse left subtree
+
+<li>traverse right subtree
+
+<li>visit root node
+</ul>
+
+<h3>Hast Tables</h3>
+<p>HashTable is a datastructure in which insertion and search operations are very fast irrespective of size of the hashtable. It is nearly a constant or O(1). Hash Table uses array as a storage medium and uses hash technique to generate index where an element is to be inserted or to be located from.</p>
+
+<h3>Hashing</h3>
+<p>Hashing is a technique to convert a range of key values into a range of indexes of an array. We're going to use modulo operator to get a range of key values. Consider an example of hashtable of size 20, and following items are to be stored. Item are in (key,value) format.</p>
+<ul>
+<li>(1,20)
+
+<li>(2,70)
+
+<li>(42,80)
+
+<li>(4,25)
+
+<li>(12,44)
+
+<li>(14,32)
+
+<li>(17,11)
+
+<li>(13,78)
+
+<li>(37,98)
+</ul>
+
+<h3>Linear Probing</h3>
+<p>As we can see, it may happen that the hashing technique used create already used index of the array. In such case, we can search the next empty location in the array by looking into the next cell until we found an empty cell. This technique is called linear probing.</p>
+
+<h3>Basic Operations</h3>
+<p>Following are basic primary operations of a hashtable which are following.</p>
+<ul>
+<li><b>Search − </b> search an element in a hashtable.
+
+<li><b>Insert − </b> insert an element in a hashtable.
+
+<li><b>delete −</b> delete an element from a hashtable.
+</ul>
+
+<h3>Search Operation</h3>
+<p>Whenever an element is to be searched. Compute the hash code of the key passed and locate the element using that hashcode as index in the array. Use linear probing to get element ahead if element not found at computed hash code.</p>
+
+<h3>Insert Operation</h3>
+<p>Whenever an element is to be inserted. Compute the hash code of the key passed and locate the index using that hashcode as index in the array. Use linear probing for empty location if an element is found at computed hash code.</p>
+
+<h3>Delete Operation</h3>
+<p>Whenever an element is to be deleted. Compute the hash code of the key passed and locate the index using that hashcode as index in the array. Use linear probing to get element ahead if an element is not found at computed hash code. When found, store a dummy item there to keep performance of hashtable intact.</p>
+
+<h3>Heap</h3>
+<p>Heap represents a special tree based data structure used to represent priority queue or for heap sort. We'll going to discuss binary heap tree specifically.</p>
+
+<p>Binary heap tree can be classified as a binary tree with two constraints −</p>
+<ul>
+<li><b>Completeness −</b> Binary heap tree is a complete binary tree except the last level which may not have all elements but elements from left to right should be filled in.
+
+<li><b>Heapness − </b> All parent nodes should be greater or smaller to their children. If parent node is to be greater than its child then it is called Max heap otherwise it is called Min heap. Max heap is used for heap sort and Min heap is used for priority queue. We're considering Min Heap and will use array implementation for the same.
+</ul>
+
+<h3>Basic Operations</h3>
+<p>Following are basic primary operations of a Min heap which are following.</p>
+<ul>
+<li><b>Insert − </b> insert an element in a heap.
+
+<li><b>Get Minimum −</b> get minimum element from the heap.
+
+<li><b>Remove Minimum − </b>remove the minimum element from the heap
+</ul>
+
+<h3>Insert Operation</h3>
+<ul>
+<li>Whenever an element is to be inserted. Insert element at the end of the array. Increase the size of heap by 1.
+
+<li>Heap up the element while heap property is broken. Compare element with parent's value and swap them if required.
+</ul>
+
+<h3>Get Minimum</h3>
+<p>Get the first element of the array implementing the heap being root.</p>
+
+<h3>Remove Minimum</h3>
+<ul>
+<li>Whenever an element is to be removed. Get the last element of the array and reduce size of heap by 1.
+
+<li>Heap down the element while heap property is broken. Compare element with children's value and swap them if required.
+</ul>
+
+<h3>Graph</h3>
+<p>Graph is a datastructure to model the mathematical graphs. It consists of a set of connected pairs called edges of vertices. We can represent a graph using an array of vertices and a two dimentional array of edges.</p>
+
+<p>Important terms</p>
+<ul>
+
+<li><b>Vertex −</b> Each node of the graph is represented as a vertex. In example given below, labeled circle represents vertices. So A to G are vertices. We can represent them using an array as shown in image below. Here A can be identified by index 0. B can be identified using index 1 and so on.
+
+<li><b>Edge −</b> Edge represents a path between two vertices or a line between two vertices. In example given below, lines from A to B, B to C and so on represents edges. We can use a two dimentional array to represent array as shown in image below. Here AB can be represented as 1 at row 0, column 1, BC as 1 at row 1, column 2 and so on, keeping other combinations as 0.
+
+<li><b>Adjacency −</b> Two node or vertices are adjacent if they are connected to each other through an edge. In example given below, B is adjacent to A, C is adjacent to B and so on.
+
+<li><b>Path −</b> Path represents a sequence of edges betweeen two vertices. In example given below, ABCD represents a path from A to D.
+</ul>
+
+<h3>Basic Operations</h3>
+<p>Following are basic primary operations of a Graph which are following.</p>
+<ul>
+<li><b>Add Vertex −</b> add a vertex to a graph.
+
+<li><b>Add Edge − </b>add an edge between two vertices of a graph.
+
+<li><b>Display Vertex −</b> display a vertex of a graph.
+</ul>
+
+<h3>Traversal Algorithms</h3>
+<p>Following are important traversal algorithms on a Graph.</p>
+<ul>
+<li><b>Depth First Search − </b>traverses a graph in depthwards motion.
+
+<li><b>Breadth First Search −</b> traverses a graph in breadthwards motion.
+</ul>
+
+<h3>Depth First Search Algorithm</h3>
+<p>Depth First Search algorithm(DFS) traverses a graph in a depthward motion and uses a stack to remember to get the next vertex to start a search when a dead end occurs in any iteration.</p>
+
+<p>As in example given above, DFS algorithm traverses from A to B to C to D first then to E, then to F and lastly to G. It employs following rules.</p>
+<ul>
+<li>Rule 1 − Visit adjacent unvisited vertex. Mark it visited. Display it. Push it in a stack.
+
+<li>Rule 2 − If no adjacent vertex found, pop up a vertex from stack. (It will pop up all the vertices from the stack which do not have adjacent vertices.)
+
+<li>Rule 3 − Repeat Rule 1 and Rule 2 until stack is empty.
+</ul>
+
+<h3>Breadth First Search Algorithm</h3>
+<p>Breadth First Search algorithm(BFS) traverses a graph in a breadthwards motion and uses a queue to remember to get the next vertex to start a search when a dead end occurs in any iteration.</p>
+
+<p>As in example given above, BFS algorithm traverses from A to B to E to F first then to C and G lastly to D. It employs following rules.</p>
+<ul>
+<li>Rule 1 − Visit adjacent unvisited vertex. Mark it visited. Display it. Insert it in a queue.
+
+<li>Rule 2 − If no adjacent vertex found, remove the first vertex from queue.
+
+<li>Rule 3 − Repeat Rule 1 and Rule 2 until queue is empty.
+</ul>
+
+<h3>Search techniques</h3>
+<p>Search refers to locating a desired element of specified properties in a collection of items. We are going to start our discussion using following commonly used and simple search algorithms.</p>
+<ol>
+<li>Linear search- Linear search searches all items and its worst execution time is n where n is the number of items.
+<li>Binary search- Binary search requires items to be in sorted order but its worst execution time is constant and is much faster than linear search.
+<li>Interpolation search- Interpolation search requires items to be in sorted order but its worst execution time is O(n) where n is the number of items and it is much faster than linear search.
+</ol>
+
+<h3>Sorting techniques</h3>
+<p>Sorting refers to arranging data in a particular format. Sorting algorithm specifies the way to arrange data in a particular order. Most common orders are numerical or lexicographical order.</p>
+
+<p>Importance of sorting lies in the fact that data searching can be optimized to a very high level if data is stored in a sorted manner. Sorting is also used to represent data in more readable formats. Some of the examples of sorting in real life scenarios are following.</p>
+<ul>
+<li>Telephone Directory − Telephone directory keeps telephone no. of people sorted on their names. So that names can be searched.
+
+<li>Dictionary − Dictionary keeps words in alphabetical order so that searching of any work becomes easy.
+</ul>
+
+<h3>Types of Sorting</h3>
+<p>Following is the list of popular sorting algorithms and their comparison.</p>
+<ol>
+<li>Bubble sort- Bubble sort is simple to understand and implement algorithm but is very poor in performance.
+<li>Selection sort- Selection sort as name specifies use the technique to select the required item and prepare sorted array accordingly.
+<li>Insertion sort- Insertion sort is a variation of selection sort.
+<li>Shell sort- Shell sort is an efficient version of insertion sort.
+<li>Quick sort- Quick sort is a highly efficient sorting algorithm and is based on partitioning of array of data into smaller arrays.
+<li>Sorting Objects- Java objects can be sorted easily using java.util.Arrays.sort()
+</ol>
+
+<h3>Recursion</h3>
+<p>Recursion refers to a technique in a programming language where a function calls itself. The function which calls itself is called a recursive method.</p>
+
+<h3>Characteristics</h3>
+<p>A recursive function must posses the following two characteristics</p>
+<ul>
+<li>Base Case(s)
+
+<li>Set of rules which leads to base case after reducing the cases.
+</ul>
+<h3>Recursive Factorial</h3>
+<p>Factorial is one of the classical example of recursion. Factorial is a non-negative number satisfying following conditions.</p>
+<ol>
+
+<li>0! = 1
+
+<li>1! = 1
+
+<li>n! = n * n-1!
+</ol>
+<p>Factorial is represented by "!". Here Rule 1 and Rule 2 are base cases and Rule 3 are factorial rules.</p>
+
+<p>As an example, 3! = 3 x 2 x 1 = 6</p>
+
+<h3>Recursive Fibonacci Series</h3>
+<p>Fibonacci Series is another classical example of recursion. Fibonacci series a series of integers satisfying following conditions.</p>
+<ol>
+<li>F0 = 0
+
+<li>F1 = 1
+
+<li>Fn = Fn-1 + Fn-2
+</ol>
+<p>Fibonacci is represented by "F". Here Rule 1 and Rule 2 are base cases and Rule 3 are fibonnacci rules.</p>
+
+<p>As an example, F5 = 0 1 1 2 3</p>

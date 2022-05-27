@@ -1,0 +1,30 @@
+body {
+    width: 90vw;
+    margin: auto;
+    background-color: rgb(5, 52, 55);
+}
+
+.lang {
+    padding: 10px;
+    margin: 5px;
+}
+
+.col {
+    color: rgb(203, 203, 211);
+}
+
+.acc {
+    color: rgb(203, 203, 211);
+    background: rgb(45, 67, 45);
+}
+
+.output {
+    background: black;
+    color: white;
+    border: 13px solid gray;
+}
+
+.list-group-item {
+    color: white;
+    background: rgba(32, 29, 29, 0.584);
+}
